@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import axios from 'axios';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  useEffect(() => {
+    const fetchData = async () => {
+      await axios.post('http://localhost:3000/login', { data: 'na' });
+    };
+    fetchData();
+  }, []);
   return (
     <div className="App">
       <header className="App-header">

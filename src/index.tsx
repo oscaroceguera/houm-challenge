@@ -4,6 +4,10 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+if (process.env.REACT_APP_MSW === 'enable') {
+  require('./mocks');
+}
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
